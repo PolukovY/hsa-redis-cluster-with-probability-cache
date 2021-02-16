@@ -1,0 +1,9 @@
+server:
+  port: 9001
+
+redis:
+  host: localhost
+  port: 6379
+  default-ttl: 240
+  caches-ttl:
+    user: 120
