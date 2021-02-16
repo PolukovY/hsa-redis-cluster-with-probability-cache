@@ -4,7 +4,6 @@ import com.levik.redis.config.properties.RedisProperties;
 import com.levik.redis.model.User;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 

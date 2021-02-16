@@ -153,12 +153,12 @@ curl -X POST \
 
 - Application logs
 ```
-2021-02-16 11:14:41.858  INFO 45316 --- [nio-9001-exec-1] com.levik.redis.service.UserService      : saveOrUpdate -> User(id=test)
-2021-02-16 11:14:42.052  INFO 45316 --- [nio-9001-exec-1] com.levik.redis.service.UserService      : Start scheduler for User(id=test) close ttl 105000 millisecond now 2021-02-16T11:14:42.050507
+2021-02-16 11:51:38.207  INFO 45706 --- [nio-9001-exec-1] com.levik.redis.service.UserService      : saveOrUpdate -> User(id=user)
+2021-02-16 11:51:38.698  INFO 45706 --- [nio-9001-exec-1] c.l.r.service.RefreshCacheUserService    : Start scheduler for User(id=user) close ttl 105000 millisecond now 2021-02-16T11:51:38.695703
 
-2021-02-16 11:16:27.061  INFO 45316 --- [efresh-key-user] com.levik.redis.service.UserService      : Trigger update -> User(id=test) now 2021-02-16T11:16:27.061381
-2021-02-16 11:16:27.061  INFO 45316 --- [efresh-key-user] com.levik.redis.service.UserService      : saveOrUpdate -> User(id=test)
-2021-02-16 11:16:27.078  INFO 45316 --- [efresh-key-user] com.levik.redis.service.UserService      : Start scheduler for User(id=test) close ttl 105000 millisecond now 2021-02-16T11:16:27.078483
+2021-02-16 11:53:23.703  INFO 45706 --- [efresh-key-user] c.l.r.service.RefreshCacheUserService    : Trigger update -> User(id=user) now 2021-02-16T11:53:23.703684
+2021-02-16 11:53:23.704  INFO 45706 --- [efresh-key-user] com.levik.redis.service.UserService      : saveOrUpdate -> User(id=user)
+2021-02-16 11:53:23.724  INFO 45706 --- [efresh-key-user] c.l.r.service.RefreshCacheUserService    : Start scheduler for User(id=user) close ttl 105000 millisecond now 2021-02-16T11:53:23.724136
 ```
 
 - Get data by id
@@ -170,5 +170,5 @@ curl -X GET 'http://127.0.0.1:9001/keys?id=user'
 - Application logs
 
 ```
-2021-02-16 11:20:34.304  INFO 45316 --- [nio-9001-exec-9] com.levik.redis.service.UserService      : getUserById -> user
+2021-02-16 11:52:07.211  INFO 45706 --- [nio-9001-exec-4] com.levik.redis.service.UserService      : getUserById -> user
 ```
